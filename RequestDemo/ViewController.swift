@@ -148,8 +148,10 @@ class ViewController: UIViewController {
             let iconName = json.weather.first??.main ?? ""
             let condition = iconName
             let dayNight = condition.suffix(1)
+            print(dayNight)
+            print(iconName)
             
-            if dayNight == "d" {
+            if dayNight != "n" {
                 self.sunShowing = true
             } else {
                 self.sunShowing = false
